@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calcular IMC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<br>
+<ion-content>
+  <div class="conteudo">
+    <br><br>
+    <p>Preencha com seus dados e descubra qual é o seu IMC.</p>
+    <ion-label>Digite seu nome:</ion-label>
+    <ion-input type="text" [(ngModel)] = "nomePessoa"></ion-input>
+    <ion-label>Digite sua idade:</ion-label>
+    <ion-input type="number" placeholder="Ex: 26." [(ngModel)] = "idadePessoa"></ion-input>
+    <ion-label>Digite sua altura:</ion-label>
+    <ion-input type="text" placeholder="Ex: 1.75(m)." [(ngModel)] = "alturaPessoa"></ion-input>
+    <ion-label>Digite seu peso:</ion-label>
+    <ion-input type="text" placeholder="Ex: 85(kg)." [(ngModel)] = "pesoPessoa"></ion-input>
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select placeholder="Selecione"[(ngModel)]="sexoPessoa">
+      <ion-select-option value="f">Feminino</ion-select-option>
+      <ion-select-option value="m">Masculino</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-button (click) = "enviar()" expand="block" shape="round">
+      Calcular!
+    </ion-button>
+    <br><br>
+  </div>
+</ion-content>
